@@ -499,9 +499,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    #define DEFAULT_Kp  14.58
+    #define DEFAULT_Ki   1.14
+    #define DEFAULT_Kd 46.57
   #endif
 #endif // PIDTEMP
 
@@ -540,9 +540,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 57.71
-  #define DEFAULT_bedKi 8.81
-  #define DEFAULT_bedKd 252.09
+  #define DEFAULT_bedKp 244.21
+  #define DEFAULT_bedKi 45.87
+  #define DEFAULT_bedKd 325.08
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -683,7 +683,7 @@
 #define Z_DRIVER_TYPE  TMC2100
 //#define X2_DRIVER_TYPE TMC2100
 //#define Y2_DRIVER_TYPE TMC2100
-//#define Z2_DRIVER_TYPE TMC2100
+#define Z2_DRIVER_TYPE  TMC2100
 //#define Z3_DRIVER_TYPE TMC2100
 //#define Z4_DRIVER_TYPE TMC2100
 #define E0_DRIVER_TYPE TMC2100
@@ -741,7 +741,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 445 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 445 }
 
 /**
  * Default Max Feed Rate (mm/s)
