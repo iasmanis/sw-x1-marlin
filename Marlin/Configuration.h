@@ -1107,7 +1107,7 @@
 // #define USE_WMIN_PLUG
 // #define USE_XMAX_PLUG
 // #define USE_YMAX_PLUG
-// #define USE_ZMAX_PLUG
+#define USE_ZMAX_PLUG
 // #define USE_IMAX_PLUG
 // #define USE_JMAX_PLUG
 // #define USE_KMAX_PLUG
@@ -1166,9 +1166,9 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING true       // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING true       // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING true       // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
@@ -1232,9 +1232,9 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT \
-    {                               \
-        80, 80, 400, 500            \
+#define DEFAULT_AXIS_STEPS_PER_UNIT  \
+    {                                \
+        80.121, 80.121, 399.778, 445 \
     }
 
 /**
@@ -1296,8 +1296,8 @@
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-#define DEFAULT_XJERK 10.0
-#define DEFAULT_YJERK 10.0
+#define DEFAULT_XJERK 8.0
+#define DEFAULT_YJERK 8.0
 #define DEFAULT_ZJERK 0.3
 // #define DEFAULT_IJERK  0.3
 // #define DEFAULT_JJERK  0.3
@@ -1777,8 +1777,8 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR true
-#define INVERT_Z_DIR false
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR true
 // #define INVERT_I_DIR false
 // #define INVERT_J_DIR false
 // #define INVERT_K_DIR false
@@ -1970,7 +1970,6 @@
  * leveling immediately after G28.
  */
 #define RESTORE_LEVELING_AFTER_G28
-// #define RESTORE_LEVELING_AFTER_G28
 // #define ENABLE_LEVELING_AFTER_G28
 
 /**
@@ -2191,6 +2190,7 @@
 #define Z_SAFE_HOMING_Y_POINT Y_CENTER // Y point for Z homing
 #endif
 
+// # TODO
 // Homing speeds (linear=mm/min, rotational=°/min)
 #define HOMING_FEEDRATE_MM_M           \
     {                                  \
