@@ -699,9 +699,14 @@
         114.00, 114.00  \
     }
 #else
-#define DEFAULT_Kp 22.20
-#define DEFAULT_Ki 1.08
-#define DEFAULT_Kd 114.00
+// Old settings
+// #define DEFAULT_Kp 23.64
+// #define DEFAULT_Ki 2.65
+// #define DEFAULT_Kd 52.78
+// Cold PID tune
+#define DEFAULT_Kp 16.55
+#define DEFAULT_Ki 3.11
+#define DEFAULT_Kd 22.04
 #endif
 #endif
 
