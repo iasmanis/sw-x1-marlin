@@ -642,7 +642,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 300
+#define HEATER_0_MAXTEMP 285
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -1312,7 +1312,7 @@
 #endif
 #endif
 
-#define DEFAULT_EJERK 5.0 // May be used by Linear Advance
+#define DEFAULT_EJERK 11.0 // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -2179,7 +2179,7 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-// #define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
 #define Z_SAFE_HOMING_X_POINT X_CENTER // X point for Z homing
@@ -3398,10 +3398,10 @@
 // Support for Adafruit NeoPixel LED driver
 #define NEOPIXEL_LED
 #if ENABLED(NEOPIXEL_LED)
-#define NEOPIXEL_TYPE NEO_GRBW // NEO_GRBW, NEO_RGBW, NEO_GRB, NEO_RBG, etc.
-                               // See https://github.com/adafruit/Adafruit_NeoPixel/blob/master/Adafruit_NeoPixel.h
-// #define NEOPIXEL_PIN                4 // LED driving pin
-// #define NEOPIXEL2_TYPE  NEOPIXEL_TYPE
+#define NEOPIXEL_TYPE NEO_RGB // NEO_GRBW, NEO_RGBW, NEO_GRB, NEO_RBG, etc.
+                              // See https://github.com/adafruit/Adafruit_NeoPixel/blob/master/Adafruit_NeoPixel.h
+// #define NEOPIXEL_PIN 4        // LED driving pin
+// #define NEOPIXEL2_TYPE NEOPIXEL_TYPE
 // #define NEOPIXEL2_PIN               5
 #define NEOPIXEL_PIXELS 30      // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
 #define NEOPIXEL_IS_SEQUENTIAL  // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
