@@ -23,11 +23,11 @@
 
 /**
  * Cohesion3D Mini pin assignments
+ * Pinout: https://green-candy.osdn.jp/external/MarlinFW/board_schematics/Cohesion3D%20Mini/c3d-pinout.jpg
+ * Origin: https://lasergods.com/cohesion3d-mini-pinout-diagram/
  */
 
-#if NOT_TARGET(MCU_LPC1769)
-  #error "Oops! Make sure you have the LPC1769 environment selected in your IDE."
-#endif
+#include "env_validate.h"
 
 #define BOARD_INFO_NAME "Cohesion3D Mini"
 

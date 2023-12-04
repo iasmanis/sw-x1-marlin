@@ -18,11 +18,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.   If not, see <https://www.gnu.org/licenses/>.
  */
+#pragma once
 
 /**
  *  Rev C  2 JUN 2017
  *
  *  Converted to Arduino pin numbering
+ *
+ *  Schematic (1.0): https://green-candy.osdn.jp/external/MarlinFW/board_schematics/Teensylu%20v1.0/schematic.png
+ *  Origin (1.0): https://raw.githubusercontent.com/StephS/Teensylu/master/working/Teensylu-1.0.sch
+ *  (*) Other versions are discouraged by creator.
  */
 
 /**
@@ -71,6 +76,9 @@
   *
   *  The pin assignments in this file match the silkscreen.
   */
+
+#define ALLOW_AT90USB1286P
+#include "env_validate.h"
 
 #if NOT_TARGET(__AVR_AT90USB1286__, __AVR_AT90USB1286P__)
   #error "Oops! Select 'Teensy++ 2.0' or 'Printrboard' in 'Tools > Board.'"
@@ -141,7 +149,7 @@
 //
 // LCD / Controller
 //
-#if BOTH(ULTRA_LCD, NEWPANEL)
+#if HAS_WIRED_LCD && IS_NEWPANEL
 
   #define BEEPER_PIN                          -1
 
@@ -154,7 +162,7 @@
 
   #define SD_DETECT_PIN                       -1
 
-#endif // ULTRA_LCD && NEWPANEL
+#endif // HAS_WIRED_LCD && IS_NEWPANEL
 
 //
 // M3/M4/M5 - Spindle/Laser Control
