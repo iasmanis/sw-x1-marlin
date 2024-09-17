@@ -37,7 +37,9 @@
     "ms-python.vscode-pylance",
     "platformio.platformio-ide",
     "marlinfirmware.auto-build",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "GitHub.copilot-chat",
+    "GitHub.copilot"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
