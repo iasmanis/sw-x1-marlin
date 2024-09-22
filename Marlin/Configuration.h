@@ -710,9 +710,9 @@
 // #define DEFAULT_Kd 16.15
 
 // Thermistor change
-#define DEFAULT_Kp 15.31
-#define DEFAULT_Ki 2.87
-#define DEFAULT_Kd 20.38
+#define DEFAULT_Kp 10.33
+#define DEFAULT_Ki 2.03
+#define DEFAULT_Kd 13.12
 #endif
 #endif
 
