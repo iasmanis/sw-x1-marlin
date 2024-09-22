@@ -703,10 +703,16 @@
 // #define DEFAULT_Kp 23.64
 // #define DEFAULT_Ki 2.65
 // #define DEFAULT_Kd 52.78
+
 // Cold PID tune
-#define DEFAULT_Kp 12.13
-#define DEFAULT_Ki 2.28
-#define DEFAULT_Kd 16.15
+// #define DEFAULT_Kp 12.13
+// #define DEFAULT_Ki 2.28
+// #define DEFAULT_Kd 16.15
+
+// Thermistor change
+#define DEFAULT_Kp 15.31
+#define DEFAULT_Ki 2.87
+#define DEFAULT_Kd 20.38
 #endif
 #endif
 
