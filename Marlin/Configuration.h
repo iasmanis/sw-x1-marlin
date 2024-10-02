@@ -642,7 +642,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 285
+#define HEATER_0_MAXTEMP 300
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -710,9 +710,14 @@
 // #define DEFAULT_Kd 16.15
 
 // Thermistor change
-#define DEFAULT_Kp 10.33
-#define DEFAULT_Ki 2.03
-#define DEFAULT_Kd 13.12
+// #define DEFAULT_Kp 10.33
+// #define DEFAULT_Ki 2.03
+// #define DEFAULT_Kd 13.12
+
+// Wiring change
+#define DEFAULT_Kp 12.14
+#define DEFAULT_Ki 2.32
+#define DEFAULT_Kd 15.91
 #endif
 #endif
 
@@ -3392,13 +3397,14 @@
  */
 
 // LED Type. Enable only one of the following two options:
-// #define RGB_LED
+#define RGB_LED
 // #define RGBW_LED
 
 #if EITHER(RGB_LED, RGBW_LED)
-// #define RGB_LED_R_PIN 34
-// #define RGB_LED_G_PIN 43
-// #define RGB_LED_B_PIN 35
+// Use AUX-2 for driving LEDs
+#define RGB_LED_R_PIN 40
+#define RGB_LED_G_PIN 42
+#define RGB_LED_B_PIN 65
 // #define RGB_LED_W_PIN -1
 // #define RGB_STARTUP_TEST              // For PWM pins, fade between all colors
 #if ENABLED(RGB_STARTUP_TEST)
@@ -3417,7 +3423,7 @@
 #define NEOPIXEL_PIXELS 30      // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
 #define NEOPIXEL_IS_SEQUENTIAL  // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
 #define NEOPIXEL_BRIGHTNESS 127 // Initial brightness (0-255)
-// #define NEOPIXEL_STARTUP_TEST         // Cycle through colors at startup
+#define NEOPIXEL_STARTUP_TEST         // Cycle through colors at startup
 
 // Support for second Adafruit NeoPixel LED driver controlled with M150 S1 ...
 // #define NEOPIXEL2_SEPARATE
